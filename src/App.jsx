@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Dashboard from './pages/Dashboard/Dashboard'
-import Layout from './pages/Layout/Layout'
+import Layout from './component/Layout/Layout'
 
 const App = () => {
   return (
