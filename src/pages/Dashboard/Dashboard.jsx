@@ -36,11 +36,11 @@ const Dashboard = () => {
   return (
     <div className='flex gap-6 p-6'>
       {/* Left side - Main Content */}
-      <div className='flex-1 bg-gray-900/40 backdrop-blur-sm border border-gray-800/50 rounded-2xl p-6'>
+      <div className='flex-1 bg-transparent backdrop-blur-sm border border-gray-700 rounded-2xl p-6'>
         {/* Header */}
         <div className='flex items-center justify-between mb-6'>
           <div>
-            <h1 className='text-3xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent'>
+            <h1 className='text-3xl font-bold bg-linear-to-r from-white to-gray-300 bg-clip-text text-transparent'>
               Dashboard
             </h1>
             <p className='text-gray-400 mt-1'>Welcome back! Here's your analytics overview.</p>
@@ -60,7 +60,7 @@ const Dashboard = () => {
         </div>
 
         {/* Stats Cards Grid */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8'>
           {statsCards.map((card, index) => {
             const IconComponent = card.icon
             return (
@@ -110,7 +110,7 @@ const Dashboard = () => {
       </div>
 
       {/* Right side - Orders & Recent Activity */}
-      <div className='w-80 space-y-6 bg-gray-900/40 backdrop-blur-sm border border-gray-800/50 rounded-2xl p-6'>
+      <div className='w-80 space-y-6 bg-transparent backdrop-blur-sm border border-gray-700 rounded-2xl p-6'>
         {/* Orders Card */}
         <div className='bg-gray-800/60 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6'>
           <div className='flex items-center justify-between mb-6'>

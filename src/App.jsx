@@ -9,7 +9,7 @@ import User from './pages/User/User'
 
 const App = () => {
   return (
-    <div className='h-screen w-full bg-black text-white overflow-hidden'>
+    <div className='h-screen w-full bg-black text-white'>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Layout/>}>

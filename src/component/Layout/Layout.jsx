@@ -5,13 +5,17 @@ import Sidebar from "../Sidebar/Sidebar";
 import { Navigate, Outlet, useLocation } from "react-router-dom";
 
 const Layout = () => {
-  const {pathname} = useLocation();
+  const { pathname } = useLocation();
   return (
-    <div className="h-screen flex  bg-linear-to-br from-gray-900 to-black text-white">
-      {/* Sidebar */}
-      <div className="w-64 p-6 border-r border-gray-800 bg-gray-900/50 backdrop-blur-lg">
+    <div className="flex bg-linear-to-br from-gray-900 to-black text-white min-h-screen">
+      {/* Fixed Sidebar */}
+      <div className="w-64 p-6 border-r border-gray-800 bg-linear-to-b from-blue-900 via-black to-black backdrop-blur-lg fixed h-screen ">
         <div className="flex items-center gap-3 mb-8">
-          <img src="./images/logo.png" alt="logo" className="h-8 rounded-full" />{" "}
+          <img
+            src="./images/logo.png"
+            alt="logo"
+            className="h-8 rounded-full"
+          />{" "}
           <span className="text-xl font-bold bg-linear-to-r from-white to-gray-300 bg-clip-text text-transparent">
             Taskulate
           </span>
@@ -29,18 +33,17 @@ const Layout = () => {
         </nav>
       </div>
 
-      {/* Main Content */}
-      <div className="flex-1 relative overflow-hidden">
+      {/* Main Content with sidebar offset */}
+      <div className="flex-1 relative overflow-hidden ml-64">
         {/* Animated Gradient Blurs */}
-        <div className="absolute top-20 left-10 h-[200px] w-[200px] bg-gray-900 rounded-full blur-[100px] opacity-60 animate-pulse"></div>
-        <div className="absolute top-40 left-64 h-[200px] w-[200px] bg-gray-600 rounded-full blur-[110px] opacity-50 animate-pulse delay-1000"></div>
-        <div className="absolute top-80 left-96 h-[200px] w-[200px] bg-gray-700 rounded-full blur-[120px] opacity-40 animate-pulse delay-2000"></div>
-        <div className="absolute bottom-20 right-32 h-[150px] w-[150px] bg-gray-600 rounded-full blur-[90px] opacity-30 animate-pulse delay-1500"></div>
+        <div className="absolute top-6 left-0 h-[120px] w-[120px] bg-blue-500 rounded-full blur-[70px] opacity-75 animate-pulse"></div>
+        <div className="absolute top-4 left-1/2 transform -translate-x-1/2 h-[140px] w-[140px] bg-purple-500 rounded-full blur-[80px] opacity-65 animate-pulse delay-1000"></div>
+        <div className="absolute top-8 right-40 h-[110px] w-[110px] bg-pink-500 rounded-full blur-[65px] opacity-55 animate-pulse delay-2000"></div>
 
         {/* Content Container */}
-        <div className="relative z-10 h-full flex flex-col">
+        <div className="  h-full flex flex-col fixed">
           {/* Header */}
-          <header className="p-6 border-b border-gray-800/50 bg-gray-900/30 backdrop-blur-sm">
+          <header className="p-6 border-b border-gray-800/50 bg-transparent backdrop-blur-sm">
             <div className="flex items-center justify-between">
               {/* Date */}
               <div className="flex items-center gap-4">
@@ -79,7 +82,7 @@ const Layout = () => {
 
                 {/* Profile */}
                 <div className="flex items-center gap-3 pl-4 border-l border-gray-700">
-                  <div className="w-10 h-10 bg-linear-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+                  <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
                     <span className="font-semibold text-white">B</span>
                   </div>
                   <div className="flex flex-col">
@@ -95,8 +98,10 @@ const Layout = () => {
               </div>
             </div>
           </header>
-          <div>
-              <Outlet/>
+          
+          {/* Main Content Area */}
+          <div className="flex-1 overflow-auto">
+            <Outlet />
           </div>
         </div>
       </div>
