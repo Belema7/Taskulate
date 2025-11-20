@@ -1,5 +1,6 @@
 import React from 'react'
 import { TrendingUp, Users, ShoppingCart, DollarSign, Calendar, ChevronDown } from 'lucide-react'
+import Statistics from '../../component/Statistics/Statistics'
 
 const Dashboard = () => {
   const statsCards = [
@@ -84,9 +85,9 @@ const Dashboard = () => {
         </div>
 
         {/* Charts Section */}
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
+        {/* <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'> */}
           {/* Revenue Chart */}
-          <div className='bg-gray-800/60 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6'>
+          {/* <div className='bg-gray-800/60 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6'>
             <div className='flex items-center justify-between mb-6'>
               <h3 className='text-lg font-semibold text-white'>Revenue Overview</h3>
               <span className='text-green-400 text-sm font-medium'>+15.2%</span>
@@ -94,10 +95,10 @@ const Dashboard = () => {
             <div className='h-64 bg-gray-900/40 rounded-xl flex items-center justify-center border border-gray-700/30'>
               <p className='text-gray-400'>Revenue chart visualization</p>
             </div>
-          </div>
+          </div> */}
 
           {/* Traffic Sources */}
-          <div className='bg-gray-800/60 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6'>
+          {/* <div className='bg-gray-800/60 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6'>
             <div className='flex items-center justify-between mb-6'>
               <h3 className='text-lg font-semibold text-white'>Traffic Sources</h3>
               <span className='text-blue-400 text-sm font-medium'>Last 7 days</span>
@@ -106,7 +107,8 @@ const Dashboard = () => {
               <p className='text-gray-400'>Traffic sources chart</p>
             </div>
           </div>
-        </div>
+        </div> */}
+        <Statistics/>
       </div>
 
       {/* Right side - Orders & Recent Activity */}

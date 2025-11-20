@@ -36,7 +36,7 @@ const Layout = () => {
       {/* Main Content with sidebar offset */}
       <div className="flex-1 relative overflow-hidden ml-64">
         {/* Animated Gradient Blurs */}
-        <div className="absolute top-6 left-0 h-[120px] w-[120px] bg-blue-500 rounded-full blur-[70px] opacity-75 animate-pulse"></div>
+        <div className="absolute  left-0 h-[120px] w-[120px] bg-blue-500 blur-[75px]  opacity-75 animate-pulse"></div>
         <div className="absolute top-4 left-1/2 transform -translate-x-1/2 h-[140px] w-[140px] bg-purple-500 rounded-full blur-[80px] opacity-65 animate-pulse delay-1000"></div>
         <div className="absolute top-8 right-40 h-[110px] w-[110px] bg-pink-500 rounded-full blur-[65px] opacity-55 animate-pulse delay-2000"></div>
 
